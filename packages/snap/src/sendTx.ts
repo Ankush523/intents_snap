@@ -17,6 +17,7 @@ export async function decodeIntent(intentMsg : any) {
         params: {
           type: 'confirmation',
           content: panel([
+            heading('Transaction Successful'),
             text(`Transaction hash is : ${data}`),
           ]),
         },
