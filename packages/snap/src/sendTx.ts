@@ -1,4 +1,4 @@
-import { heading, panel, text } from "@metamask/snaps-ui";
+import { divider, heading, panel, text } from "@metamask/snaps-ui";
 
 export async function decodeIntent(intentMsg : any) {
     const options = {
@@ -17,7 +17,8 @@ export async function decodeIntent(intentMsg : any) {
         params: {
           type: 'confirmation',
           content: panel([
-            heading('Transaction Successful'),
+            heading('Transaction Confirmed'),
+            divider(),
             text(`Transaction hash is : ${data}`),
           ]),
         },
